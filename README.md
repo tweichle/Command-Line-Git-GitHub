@@ -1,8 +1,8 @@
 ## Command Line-Git-GitHub
 
-### Terminal Window
+### <u>Terminal Window</u>
 
-### Using the Command Line
+### <u>Using the Command Line</u>
 [Command Line Tutorial](http://generalassembly.github.io/prework/cl/#/) 
 
 #### Typing cd (or cd ~) — a command for "change directory" — with no parameters takes us to our home directory:
