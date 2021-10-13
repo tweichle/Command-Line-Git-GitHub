@@ -1,0 +1,321 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 HelveticaNeue-BoldItalic;
+\f3\fnil\fcharset0 HelveticaNeue-Italic;}
+{\colortbl;\red255\green255\blue255;\red220\green161\blue13;}
+{\*\expandedcolortbl;;\cssrgb\c89412\c68627\c3922;}
+\margl1440\margr1440\vieww24180\viewh12880\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs32 \cf0 Command Line/Git/GitHub
+\fs26 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b\fs30 \cf0 \ul \ulc0 Terminal Window\
+\
+Using the Command Line\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://generalassembly.github.io/prework/cl/#/"}}{\fldrslt 
+\f0\b0\fs26 \cf2 \ulnone Command Line Tutorial}}
+\f0\b0\fs26 \ulnone \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 Typing cd (or cd ~) \'97 a command for "
+\f2\i change directory
+\f1\i0 " \'97 with no parameters takes us to our home directory:\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0 \cf0 cd\
+cd ~
+\f1\b \
+\
+Change the current directory (folder) (i.e., navigate to directory (folder) of choice):
+\f0\b0 \
+cd ~/Desktop/\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 List directory (folder) contents:
+\f0\b0 \
+ls\
+\
+
+\f1\b Make directories (folders):
+\f0\b0 \
+mkdir example_folder\
+\
+
+\f1\b Change the current directory (folder) (i.e., navigate to new folder):
+\f0\b0 \
+cd example_folder/\
+\
+
+\f1\b Print the current working directory:
+\f0\b0 \
+pwd\
+\
+
+\f1\b Create a file (e.g., a text file; could be something different like Jupyter Notebook?????):
+\f0\b0 \
+touch cat.txt\
+touch dog.txt\
+touch bird.txt\
+touch fish.txt\
+\uc0\u8232 
+\f1\b Remove directory (folder) entries (files):
+\f0\b0 \
+rm cat.txt\
+\
+
+\f1\b Using Wildcards:
+\f0\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f3\i \cf0 List any file with "i" in the file name
+\f0\i0 \
+ls *i*\
+\
+
+\f3\i Remove any file with "d"
+\f0\i0 \
+rm *d*\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 File pattern searcher (e.g., find all files with the word \'93the\'94 inside):
+\f0\b0 \
+grep -r \'93the\'94 *\
+\
+
+\f1\b Find utility (e.g., find all Jupyter Notebook files within subdirectories of the current working directory):
+\f0\b0 \
+find . | grep ipynb\
+\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b\fs30 \cf0 \ul Introduction to Git\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://try.github.io/levels/1/challenges/1"}}{\fldrslt 
+\f0\b0\fs26 \cf2 \ulnone Git Tutorial}}
+\f0\b0\fs26 \ulnone \
+\
+cd ~/Desktop\
+mkdir hello-world\
+cd hello-world\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Create an empty Git repository or reinitialize an existing one:
+\f0\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 git init\
+ls -A\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 Create a file:
+\f0\b0 \
+touch a.txt\
+\
+
+\f1\b Show the working tree status:
+\f0\b0 \
+git status\
+\
+
+\f1\b Add file contents to the index:
+\f0\b0 \
+git add a.txt\
+git status\
+\
+
+\f1\b Record changes to the repository (-m for including log message):
+\f0\b0 \
+git commit -m "Please remember this file at this time"\
+\
+
+\f1\b Show commit logs:
+\f0\b0 \
+git log\
+\
+
+\f1\b Making and Cloning Repositories\
+Manage the set of tracked repositories ("remotes\'94):\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 git remote add origin https://github.com/tweichle/hello-world.git\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 \
+
+\f2\i Pushing to GitHub
+\f0\i0\b0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Update remote refs along with associated objects (i.e., send files from local machine to remote repository on GitHub):
+\f0\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 git push -u origin master\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 Create a README.md file:
+\f0\b0 \
+nano README.md\
+git add README.md\
+git status\
+git commit -m "New README.md"\
+git push -u origin master\
+\
+
+\f2\i\b Pulling from GitHub
+\f0\i0\b0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Fetch from and integrate with another repository or a local branch:
+\f0\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 git pull origin master\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Clone a repository into a new directory
+\f0\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 git clone https://github.com/github-username/hello-world.git\
+\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f1\b \cf0 These are common Git commands used in various situations:
+\f0\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 git help\
+\
+usage: git [--version] [--help] [-C <path>] [-c name=value]\
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]\
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\
+           <command> [<args>]\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+start a working area (see also: git help tutorial)\
+   clone      	Clone a repository into a new directory\
+   init       		Create an empty Git repository or reinitialize an existing one\
+\
+work on the current change (see also: git help everyday)\
+   add        	Add file contents to the index\
+   mv         	Move or rename a file, a directory, or a symlink\
+   reset      	Reset current HEAD to the specified state\
+   rm         		Remove files from the working tree and from the index\
+\
+examine the history and state (see also: git help revisions)\
+   bisect     	Use binary search to find the commit that introduced a bug\
+   grep       	Print lines matching a pattern\
+   log        		Show commit logs\
+   show       	Show various types of objects\
+   status     	Show the working tree status\
+\
+grow, mark and tweak your common history\
+   branch     	List, create, or delete branches\
+   checkout   	Switch branches or restore working tree files\
+   commit     	Record changes to the repository\
+   diff     		Show changes between commits, commit and working tree, etc\
+   merge      	Join two or more development histories together\
+   rebase     	Reapply commits on top of another base tip\
+   tag           	Create, list, delete or verify a tag object signed with GPG\
+\
+collaborate (see also: git help workflows)\
+   fetch      	Download objects and refs from another repository\
+   pull       		Fetch from and integrate with another repository or a local branch\
+   push       	Update remote refs along with associated objects\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 git help -a\
+\
+'git help -a' and 'git help -g' list available subcommands and some concept guides\
+\
+available git commands:\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0   add                       			merge-ours\
+  add--interactive          		merge-recursive\
+  am                        			merge-resolve\
+  annotate                  			merge-subtree\
+  apply                     			merge-tree\
+  archive                   			mergetool\
+  bisect                    			mktag\
+  bisect--helper            			mktree\
+  blame                     			mv\
+  branch                    			name-rev\
+  bundle                    			notes\
+  cat-file                  			p4\
+  check-attr                			pack-objects\
+  check-ignore              			pack-redundant\
+  check-mailmap             		pack-refs\
+  check-ref-format          		patch-id\
+  checkout                  			prune\
+  checkout-index            		prune-packed\
+  cherry                    			pull\
+  cherry-pick               			push\
+  citool                    			quiltimport\
+  clean                     			read-tree\
+  clone                     			ebase\
+  column                    			rebase--helper\
+  commit                    			receive-pack\
+  commit-tree            			reflog\
+  config                    			remote\
+  count-objects             			remote-ext\
+  credential                			remote-fd\
+  credential-cache          		remote-ftp\
+  credential-cache--daemon  	remote-ftps\
+  credential-osxkeychain    		remote-http\
+  credential-store          		remote-https\
+  daemon                    			remote-testsvn\
+  describe                  			repack\
+  diff                      				replace\
+  diff-files                			request-pull\
+  diff-index                			rerere\
+  diff-tree                 			reset\
+  difftool                  			rev-list\
+  difftool--helper          			rev-parse\
+  fast-export               			revert\
+  fast-import               			rm\
+  fetch                     			send-email\
+  fetch-pack                			send-pack\
+  filter-branch             			sh-i18n--envsubst\
+  fmt-merge-msg             		shell\
+  for-each-ref              			shortlog\
+  format-patch              			show\
+  fsck                      				show-branch\
+  fsck-objects              			show-index\
+  gc                        				show-ref\
+  get-tar-commit-id         		stage\
+  grep                      			stash\
+  gui--askpass              			status\
+  hash-object               			stripspace\
+  help                      				submodule\
+  http-backend              		submodule--helper\
+  http-fetch                			subtree\
+  http-push                 			svn\
+  imap-send                 			symbolic-ref\
+  index-pack                			tag\
+  init                      				unpack-file\
+  init-db                   			unpack-objects\
+  instaweb                  			update-index\
+  interpret-trailers        			update-ref\
+  log                       				update-server-info\
+  ls-files                  			upload-archive\
+  ls-remote                 			upload-pack\
+  ls-tree                   			var\
+  mailinfo                  			verify-commit\
+  mailsplit                 			verify-pack\
+  merge                     			verify-tag\
+  merge-base                			web--browse\
+  merge-file                			whatchanged\
+  merge-index               			worktree\
+  merge-octopus             		write-tree\
+  merge-one-file}
